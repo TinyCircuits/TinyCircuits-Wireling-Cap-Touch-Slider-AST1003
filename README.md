@@ -1,5 +1,5 @@
 # TinyCircuits Whisker Cap Touch Slider
-# AST1003
+# AST1003 Rev1
 
 The design files are located under design_files/ for the TinyCircuits AST1003 Rev 1 PCB. This is a whisker board which detects the presence and location of conductive materials such as a user's finger.  Includes a built-in microcontroller to perform the capacitance measurements.
 
