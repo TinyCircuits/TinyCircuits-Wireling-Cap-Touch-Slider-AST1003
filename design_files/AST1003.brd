@@ -67,6 +67,8 @@
 <layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="Invisible" color="7" fill="1" visible="no" active="no"/>
 <layer number="61" name="stand" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -137,6 +139,7 @@
 <layer number="157" name="tResistor" color="7" fill="1" visible="no" active="yes"/>
 <layer number="158" name="bResistor" color="7" fill="1" visible="no" active="yes"/>
 <layer number="159" name="henwayCAP" color="13" fill="1" visible="yes" active="yes"/>
+<layer number="160" name="IDFDebug" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="191" name="mNets" color="7" fill="1" visible="no" active="no"/>
 <layer number="192" name="mBusses" color="7" fill="1" visible="no" active="no"/>
 <layer number="193" name="mPins" color="7" fill="1" visible="no" active="no"/>
@@ -3209,7 +3212,7 @@
 <wire x1="16.85" y1="23.9" x2="16.85" y2="24.5" width="0.1" layer="21"/>
 <wire x1="15.55" y1="24.5" x2="16.25" y2="24.5" width="0.1" layer="21"/>
 <wire x1="16.25" y1="24.5" x2="16.85" y2="24.5" width="0.1" layer="21"/>
-<text x="16.6" y="25" size="0.762" layer="21" rot="SR90">Touch Slider R1</text>
+<text x="16.6" y="25" size="0.762" layer="21" rot="SR90">Touch Slider R2</text>
 <text x="27.878" y="36.655996875" size="0.635" layer="48" ratio="10">NOTES:</text>
 <text x="27.878" y="34.115996875" size="0.4572" layer="48" ratio="10">2.  ALL DIMENSIONS ARE GIVEN IN INCHES.</text>
 <text x="27.878" y="33.353996875" size="0.4572" layer="48" ratio="10">3.  CIRCUIT PATHS ARE FOR REFERENCE ONLY.</text>
@@ -3224,26 +3227,28 @@
 <text x="27.878" y="29.543996875" size="0.4572" layer="48" ratio="10">7.  SILKSCREEN BOARD USING WHITE INK.</text>
 <text x="27.874240625" y="35.666715625" size="0.4572" layer="48" ratio="10">1.  PRINTED CIRCUIT BOARD MADE FROM NEMA GRADE FR-4 EPOXY LAMINATE</text>
 <text x="29.35628125" y="34.890696875" size="0.4572" layer="48" ratio="10">WITH 1 OUNCE COPPER PLATING AND .024 THICKNESS.</text>
-<text x="21.465" y="119.928" size="1.27" layer="48" ratio="10">FABRICATION DRAWING</text>
+<text x="31.465" y="89.928" size="1.27" layer="48" ratio="10">FABRICATION DRAWING</text>
 <wire x1="0" y1="0" x2="57.85" y2="0" width="0.127" layer="48"/>
-<wire x1="57.85" y1="0" x2="57.85" y2="125.8" width="0.127" layer="48"/>
-<wire x1="57.85" y1="125.8" x2="0" y2="125.8" width="0.127" layer="48"/>
-<wire x1="0" y1="125.8" x2="0" y2="0" width="0.127" layer="48"/>
-<dimension x1="10" y1="90" x2="20" y2="90" x3="15" y3="96.854653125" layer="48"/>
-<text x="36.111025" y="4.365003125" size="0.889" layer="48">Cap. Touch Slider</text>
+<wire x1="57.85" y1="0" x2="57.85" y2="95.8" width="0.127" layer="48"/>
+<wire x1="57.85" y1="95.8" x2="0" y2="95.8" width="0.127" layer="48"/>
+<wire x1="0" y1="95.8" x2="0" y2="0" width="0.127" layer="48"/>
+<dimension x1="10" y1="85" x2="20" y2="85" x3="15" y3="87.654653125" layer="48"/>
+<text x="36.111025" y="4.365003125" size="0.889" layer="48">Wireling Cap Touch</text>
 <text x="35.986825" y="1.7714" size="0.889" layer="48">AS-PCB-AST1003</text>
-<text x="55.3810375" y="1.6952" size="0.889" layer="48">1</text>
-<wire x1="10" y1="90" x2="20" y2="90" width="0.0254" layer="20"/>
-<wire x1="20" y1="90" x2="20" y2="0" width="0.0254" layer="20"/>
-<wire x1="20" y1="0" x2="10" y2="0" width="0.0254" layer="20"/>
-<wire x1="10" y1="0" x2="10" y2="90" width="0.0254" layer="20"/>
-<dimension x1="10" y1="90" x2="10" y2="0" x3="6.5" y3="45" layer="48" dtype="vertical"/>
-<hole x="15" y="4" drill="3"/>
+<text x="55.3810375" y="1.6952" size="0.889" layer="48">2</text>
+<wire x1="10" y1="85" x2="20" y2="85" width="0.0254" layer="20"/>
+<wire x1="20" y1="85" x2="20" y2="5" width="0.0254" layer="20"/>
+<wire x1="20" y1="5" x2="10" y2="5" width="0.0254" layer="20"/>
+<wire x1="10" y1="5" x2="10" y2="85" width="0.0254" layer="20"/>
+<dimension x1="10" y1="85" x2="10" y2="5" x3="6.5" y3="45" layer="48" dtype="vertical"/>
 <wire x1="14.95" y1="17.5" x2="14.95" y2="16.55" width="0.2032" layer="41"/>
 <wire x1="14.6" y1="17.8" x2="13.55" y2="17.8" width="0.2032" layer="41"/>
 <wire x1="13.25" y1="17.5" x2="13.25" y2="16.55" width="0.2032" layer="41"/>
 <wire x1="13.6" y1="16.15" x2="14.55" y2="16.15" width="0.2032" layer="41"/>
-<hole x="15" y="86" drill="3"/>
+<hole x="18.5" y="6.5" drill="1.5"/>
+<hole x="11.5" y="6.5" drill="1.5"/>
+<hole x="11.5" y="83.5" drill="1.5"/>
+<hole x="18.5" y="83.5" drill="1.5"/>
 </plain>
 <libraries>
 <library name="tinycircuits">
@@ -13652,13 +13657,13 @@ design rules under a new name.</description>
 <element name="TP6" library="tinycircuits" package="TEST_POINT_1MM" value="" x="10.7" y="14.9">
 <attribute name="DATABASE" value="./../../../../../Components/TinyCircuits_Part_Database.txt" x="10.7" y="14.9" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C3" library="tinycircuits" package="C0603" value="10uF" x="11.9" y="14" rot="R90">
-<attribute name="PARTNO" value="AS-ITM-00002" x="11.9" y="14" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" value="10uF" x="11.9" y="14" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="C3" library="tinycircuits" package="C0603" value="1uF" x="11.9" y="14" rot="R90">
+<attribute name="PARTNO" value="AS-ITM-00410" x="11.9" y="14" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" value="1uF" x="11.9" y="14" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R2" library="tinycircuits" package="0402" value="0.0" x="17.9" y="13.7" rot="R270">
-<attribute name="PARTNO" value="AS-ITM-00076" x="17.9" y="13.7" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" value="0.0" x="17.9" y="13.7" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="R2" library="tinycircuits" package="0402" value="1.00K" x="17.9" y="13.7" rot="R270">
+<attribute name="PARTNO" value="AS-ITM-00003" x="17.9" y="13.7" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" value="1.00K" x="17.9" y="13.7" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 </elements>
 <signals>
@@ -13821,8 +13826,8 @@ design rules under a new name.</description>
 <wire x1="12.55" y1="16.1" x2="11.3" y2="16.1" width="0.2032" layer="1"/>
 <via x="13.9" y="71.15" extent="1-16" drill="0.381"/>
 <polygon width="0.2032" layer="16">
-<vertex x="10" y="82.25"/>
-<vertex x="20" y="82.25"/>
+<vertex x="10" y="82"/>
+<vertex x="20" y="82"/>
 <vertex x="20" y="70.25"/>
 <vertex x="10" y="70.25"/>
 </polygon>
@@ -13855,19 +13860,13 @@ design rules under a new name.</description>
 <polygon width="0.2032" layer="16">
 <vertex x="10" y="19.75"/>
 <vertex x="20" y="19.75"/>
-<vertex x="20" y="7.75"/>
-<vertex x="10" y="7.75"/>
+<vertex x="20" y="8"/>
+<vertex x="10" y="8"/>
 </polygon>
 <wire x1="16.6" y1="18.3" x2="16.5" y2="18.3" width="0.2032" layer="1"/>
 <wire x1="16.5" y1="18.3" x2="16.1" y2="17.9" width="0.2032" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="5,1,f292fd966e8a818c"/>
-<approved hash="5,1,5fa4b05e23422cba"/>
-<approved hash="5,1,f1f3dc054d1740e3"/>
-<approved hash="5,1,82c18f211e3333d1"/>
-</errors>
 </board>
 </drawing>
 </eagle>

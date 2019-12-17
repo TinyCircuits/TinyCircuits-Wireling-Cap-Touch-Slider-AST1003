@@ -67,6 +67,8 @@
 <layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="Invisible" color="7" fill="1" visible="no" active="no"/>
 <layer number="61" name="stand" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -137,6 +139,7 @@
 <layer number="157" name="tResistor" color="7" fill="1" visible="no" active="yes"/>
 <layer number="158" name="bResistor" color="7" fill="1" visible="no" active="yes"/>
 <layer number="159" name="henwayCAP" color="13" fill="1" visible="yes" active="yes"/>
+<layer number="160" name="IDFDebug" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="191" name="mNets" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="192" name="mBusses" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="193" name="mPins" color="7" fill="1" visible="yes" active="yes"/>
@@ -275,16 +278,6 @@
 <text x="0" y="0" size="0.635" layer="25" align="center">&gt;NAME</text>
 <wire x1="-1.397" y1="0.508" x2="-1.397" y2="-0.4826" width="0.1016" layer="51"/>
 <wire x1="1.397" y1="0.508" x2="1.397" y2="-0.4826" width="0.1016" layer="51"/>
-</package>
-<package name="0402_SHORT">
-<wire x1="-0.998" y1="0.3504" x2="0.9907" y2="0.3504" width="0.127" layer="51"/>
-<wire x1="0.9907" y1="0.3504" x2="0.9907" y2="-0.3432" width="0.127" layer="51"/>
-<wire x1="0.9907" y1="-0.3432" x2="-0.998" y2="-0.3432" width="0.127" layer="51"/>
-<wire x1="-0.998" y1="-0.3432" x2="-0.998" y2="0.3504" width="0.127" layer="51"/>
-<smd name="1" x="-0.6" y="0" dx="0.65" dy="0.55" layer="1"/>
-<smd name="2" x="0.6" y="0" dx="0.65" dy="0.55" layer="1"/>
-<text x="0" y="0" size="0.3048" layer="25" align="center">&gt;NAME</text>
-<wire x1="-0.635" y1="0" x2="0.5588" y2="0" width="0.2032" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -10400,6 +10393,22 @@
 <pin name="1" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
+<symbol name="RESISTOR">
+<description>Resistor</description>
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<text x="0" y="1.4986" size="1.778" layer="95" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-3.302" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
 <symbol name="RESISTOR-1">
 <description>Resistor</description>
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
@@ -10616,8 +10625,8 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00002" prefix="C" uservalue="yes">
-<description>CAP CER 10UF 10V 20% X5R 0603</description>
+<deviceset name="AS-ITM-00410" prefix="C" uservalue="yes">
+<description>CAP CER 1UF 10V X5R 0603</description>
 <gates>
 <gate name="G$1" symbol="C-US" x="0" y="0"/>
 </gates>
@@ -10629,17 +10638,17 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PARTNO" value="AS-ITM-00002" constant="no"/>
-<attribute name="VALUE" value="10uF" constant="no"/>
+<attribute name="PARTNO" value="AS-ITM-00410" constant="no"/>
+<attribute name="VALUE" value="1uF" constant="no"/>
 </technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00076" prefix="R" uservalue="yes">
-<description>RES 0.0 OHM 1/16W 1% 0402 SMD</description>
+<deviceset name="AS-ITM-00003" prefix="R">
+<description>RES 1.00K OHM 1/16W 1% 0402</description>
 <gates>
-<gate name="G$1" symbol="RESISTOR-1" x="0" y="0"/>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="0402">
@@ -10649,31 +10658,8 @@
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PARTNO" value="AS-ITM-00076" constant="no"/>
-<attribute name="VALUE" value="0.0" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="0402_SHORT" package="0402_SHORT">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="VALUE" value="SHORT" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="C0402" package="C0402">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PARTNO" value="AS-ITM-00076" constant="no"/>
-<attribute name="VALUE" value="0.0" constant="no"/>
+<attribute name="PARTNO" value="AS-ITM-00003" constant="no"/>
+<attribute name="VALUE" value="1.00K" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -10711,17 +10697,23 @@
 <part name="P+2" library="tinycircuits" deviceset="VCC" device=""/>
 <part name="P+3" library="tinycircuits" deviceset="VCC" device=""/>
 <part name="GND1" library="tinycircuits" deviceset="GND" device=""/>
-<part name="C3" library="tinycircuits" deviceset="AS-ITM-00002" device="" value="10uF"/>
+<part name="C3" library="tinycircuits" deviceset="AS-ITM-00410" device="" value="1uF">
+<attribute name="PARTNO" value="AS-ITM-00410"/>
+<attribute name="VALUE" value="1uF"/>
+</part>
 <part name="P+5" library="tinycircuits" deviceset="VCC" device=""/>
 <part name="GND4" library="tinycircuits" deviceset="GND" device=""/>
-<part name="R2" library="tinycircuits" deviceset="AS-ITM-00076" device="" value="0.0"/>
+<part name="R2" library="tinycircuits" deviceset="AS-ITM-00003" device="" value="1.00K">
+<attribute name="PARTNO" value="AS-ITM-00003"/>
+<attribute name="VALUE" value="1.00K"/>
+</part>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="340.868" y="17.272" size="3.556" layer="94" font="vector">Cap. Touch Slider Board</text>
+<text x="340.868" y="17.272" size="3.556" layer="94" font="vector">Wireling Cap Touch</text>
 <text x="327.152" y="6.35" size="3.556" layer="94" font="vector">AS-SCH-AST1003</text>
-<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">1</text>
+<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">2</text>
 <text x="165.1" y="185.42" size="5.08" layer="94" font="vector">Capacitive Touch Slider</text>
 <text x="45.72" y="35.56" size="3.048" layer="91">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
 <text x="45.72" y="30.48" size="3.048" layer="91">http://creativecommons.org/licenses/by-sa/3.0</text>
